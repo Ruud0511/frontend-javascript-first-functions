@@ -17,6 +17,12 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
+function greeter (firstName) {
+  return Hoi + firstName + !
+}
+
+const resultGreeter = greeter(firstName: Jan);
+console.log(resultGreeter);
 
 
 /* Opdracht 2 */
