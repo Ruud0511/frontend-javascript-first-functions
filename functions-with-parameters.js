@@ -17,11 +17,11 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
-function greeter (firstName) {
-  return Hoi + firstName + !
+function greeter (name) {
+  return 'Hoi '+ name + '!'
 }
 
-const resultGreeter = greeter(firstName: Jan);
+const resultGreeter = greeter('Kees');
 console.log(resultGreeter);
 
 
@@ -32,6 +32,12 @@ console.log(resultGreeter);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(minutes) {
+  return minutes * 60
+}
+
+const resultOfSeconds = minutesToSeconds(1);
+console.log(resultOfSeconds);
 
 
 /* Opdracht 3 */
@@ -41,8 +47,12 @@ console.log(resultGreeter);
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
 
+function merge(a, b) {
+  return a + b
+}
 
-
+const resultMerge = merge ('zoet', 'sappig')
+  console.log(resultMerge)
 
 /* Opdracht  4 */
 // Schrijf een functie genaamd calculateDogYears die de hondenleeftijd verwacht en dit omrekent naar mensenjaren (1 tot 7). Op basis daarvan wordt een zinnetje teruggegeven.
@@ -50,7 +60,12 @@ console.log(resultGreeter);
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
 
+function calculateDogYears(humanAge) {
+  return humanAge * 7
+}
 
+const resultDogYears = calculateDogYears(5)
+  console.log('Jouw hond is ' + resultDogYears + ' jaar oud in mensenjaren.');
 
 /* Opdracht 5 */
 // Schrijf een functie genaamd wrapper, die twee parameters verwacht: een woord en een karakter
@@ -60,7 +75,12 @@ console.log(resultGreeter);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(x, wrapInput) {
+  return x + wrapInput + x
+}
 
+const wrapOutput = wrapper('Q', 'kaas');
+  console.log(wrapOutput)
 
 /* Bonus opdracht  */
 // Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
@@ -68,4 +88,12 @@ console.log(resultGreeter);
 // createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft "Het beroep vam Jan Jansen is docent."
 // createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
 
+function createDetailString (firstName, lastName, profession) {
+  return  {
+    name: firstName + ' ' + lastName,
+    prof: profession
+  }
+}
 
+const detailString = createDetailString('Kees', 'Klaassen', 'brandweerman')
+  console.log('Het beroep van ' + detailString.name + ' is ' + detailString.prof);
